@@ -1,6 +1,10 @@
 # Stockio - simple view of high and low of companies.
 
 ![img](https://i.imgur.com/Ezwei9V.png)
+![img](https://i.imgur.com/vzmGJ7U.png)
+
+Quick start - `npm start`
+Go to link - `http://localhost:4200/`
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
 
