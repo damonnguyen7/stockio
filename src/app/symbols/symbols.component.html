@@ -1,0 +1,23 @@
+<section id="symbols-list-container">
+  <h3 class="text-center"><i class="material-icons" style="position: absolute; margin-left: -25px;">insert_chart</i> Stockio</h3>
+  <div>
+    <input style="padding-left: 18px;" [(ngModel)]="filterQuery" (keyup)="filterSymbols()" placeholder="Search stock">
+  </div>
+  <div *ngIf="!filterQuery">
+    <ul>
+      <li class="symbol-list-item col-xs-12" *ngFor="let symbol of symbols" (click)="selectSymbol(symbol)">
+        <span class="symbol-span">{{ symbol.Symbol }}</span> - <span class="symbol-name-span">{{ symbol.Name }}</span>
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="filterQuery">
+    <ul>
+      <li class="no-results col-xs-12 text-center" *ngIf="filteredSymbols.length === 0">
+        <span class="symbol-span">No results found</span>
+      </li>
+      <li class="symbol-list-item col-xs-12" *ngFor="let symbol of filteredSymbols" (click)="selectSymbol(symbol)">
+        <span class="symbol-span">{{ symbol.Symbol }}</span> - <span class="symbol-name-span">{{ symbol.Name }}</span>
+      </li>
+    </ul>
+  </div>
+</section>

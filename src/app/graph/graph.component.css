@@ -1,0 +1,64 @@
+#graph-container {
+  min-height: 705px;
+  background-color: #23272A;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 10px, rgba(0, 0, 0, 0.23) 0px 3px 10px;
+  padding:0px;
+}
+
+.graph-header {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 10px, rgba(0, 0, 0, 0.23) 0px 3px 10px;
+  padding-bottom: 5px;
+}
+
+#chart-container {
+  background-color: white;
+}
+
+@media only screen and (max-width: 767px) {
+  #graph-container {
+    min-height: 500px !important;
+  }
+}
+
+.chart-button-year {
+  height: 25px;
+  width: 50px;
+  background-color: #2C2F33;
+  color: #d2dae2;
+  display: inline-block;
+  border-radius: 2px;
+}
+
+.chart-button-year:hover {
+  color: white;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.chart-button-year span {
+  position: absolute;
+  margin-left: -15px;
+  margin-top: 2px;
+}
+
+.chart-button-month {
+  height: 25px;
+  width: 50px;
+  background-color: #2C2F33;
+  color: #d2dae2;
+  display: inline-block;
+  border-radius: 2px;
+}
+
+.chart-button-month:hover {
+  color: white;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.chart-button-month span {
+  position: absolute;
+  margin-left: -21px;
+  margin-top: 2px;
+}

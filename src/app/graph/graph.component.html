@@ -1,0 +1,34 @@
+<section id="graph-container">
+  <!-- <h1>{{metaData.Symbol}} - {{metaData.Information}}</h1> -->
+  <div class="col-xs-12 graph-header" style="background-color: #23272A;">
+    <h3 class="text-center" *ngIf="metaData.Symbol !== undefined">{{ metaData.Symbol }} - {{metaData.Industry}} - {{metaData.Sector}}</h3>
+  </div>
+  <div id="chart-container">
+    <div *ngIf="displayChart === 'monthly'">
+      <div style="display: block;">
+      <canvas baseChart width="600" height="350"
+                  [datasets]="lineChartData"
+                  [labels]="lineChartLabels"
+                  [options]="lineChartOptions"
+                  [colors]="lineChartColors"
+                  [legend]="lineChartLegend"
+                  [chartType]="lineChartType"></canvas>
+      </div>
+    </div>
+    <div *ngIf="displayChart === 'year'">
+      <div style="display: block">
+        <canvas baseChart width="600" height="350"
+                [datasets]="barChartData"
+                [labels]="barChartLabels"
+                [options]="barChartOptions"
+                [legend]="barChartLegend"
+                [chartType]="barChartType"></canvas>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 3px;">
+    <div class="chart-button-month text-center" (click)="switchToDailyGraph()"><span>month</span></div>
+    <div class="chart-button-year text-center" (click)="switchToYearlyGraph()"><span>year</span></div>
+  </div>
+  <app-symbols class="col-xs-12 hidden-sm hidden-md hidden-lg" style="padding: 0px;"></app-symbols>
+</section>
