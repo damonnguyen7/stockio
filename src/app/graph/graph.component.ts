@@ -22,29 +22,21 @@ export class GraphComponent implements OnInit {
     responsive: true
   };
   public lineChartColors:Array<any> = [
-    { // grey
-      backgroundColor: 'rgba(148,159,177,0.2)',
-      borderColor: 'rgba(148,159,177,1)',
-      pointBackgroundColor: 'rgba(148,159,177,1)',
+    { // blue
+      backgroundColor: '#8AC8F1',
+      borderColor: '#3DA3E8',
+      pointBackgroundColor: '#3DA3E8',
       pointBorderColor: '#fff',
-      pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: 'rgba(148,159,177,0.8)'
+      pointHoverBackgroundColor: '#3DA3E8',
+      pointHoverBorderColor: '#3DA3E8'
     },
-    { // dark grey
-      backgroundColor: 'rgba(77,83,96,0.2)',
-      borderColor: 'rgba(77,83,96,1)',
-      pointBackgroundColor: 'rgba(77,83,96,1)',
+    { // red
+      backgroundColor: '#FDA2B6',
+      borderColor: '#FD6585',
+      pointBackgroundColor: '#FD6585',
       pointBorderColor: '#fff',
-      pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: 'rgba(77,83,96,1)'
-    },
-    { // grey
-      backgroundColor: 'rgba(148,159,177,0.2)',
-      borderColor: 'rgba(148,159,177,1)',
-      pointBackgroundColor: 'rgba(148,159,177,1)',
-      pointBorderColor: '#fff',
-      pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: 'rgba(148,159,177,0.8)'
+      pointHoverBackgroundColor: '#FD6585',
+      pointHoverBorderColor: '#FD6585'
     }
   ];
 
@@ -92,8 +84,8 @@ export class GraphComponent implements OnInit {
   }
 
   public generateYearlyChart(chartData): void {
-    const lowChart = {data: [], label: 'Low average'};
-    const highChart = {data: [], label: 'High average'};
+    const lowChart = {data: [], label: 'High average'};
+    const highChart = {data: [], label: 'Low average'};
     let totalLow = 0;
     let totalHigh = 0;
     let currentYear;
@@ -108,8 +100,8 @@ export class GraphComponent implements OnInit {
       } else if (currentYear !== year) {
         let lowAverage = totalLow / yearFrequency;
         let highAverage = totalHigh / yearFrequency;
-        lowChart.data.push(Number(lowAverage.toString().slice(0, 4)));
-        highChart.data.push(Number(highAverage.toString().slice(0, 4)));
+        highChart.data.push(Number(lowAverage.toString().slice(0, 4)));
+        lowChart.data.push(Number(highAverage.toString().slice(0, 4)));
         totalLow = 0;
         totalHigh = 0;
         yearFrequency = 0;
