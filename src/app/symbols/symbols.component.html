@@ -2,6 +2,7 @@
   <h3 class="text-center"><i class="material-icons" style="position: absolute; margin-left: -25px;">insert_chart</i> Stockio</h3>
   <div>
     <input style="padding-left: 18px;" [(ngModel)]="filterQuery" (keyup)="filterSymbols()" placeholder="Search stock">
+    <i *ngIf="displayClearButton" class="material-icons symbols-input-clear" (click)="clearInputField()">close</i>
   </div>
   <div *ngIf="!filterQuery">
     <ul>

@@ -14,6 +14,7 @@ export class SymbolsComponent implements OnInit {
   filteredSymbols: SymbolMetaType[];
   filterQuery: string;
   period: 'Monthly'
+  displayClearButton: boolean = false;
 
   constructor(private symbolService: SymbolService) { }
 
@@ -44,13 +45,18 @@ export class SymbolsComponent implements OnInit {
         const matchSymbolName = symbolObj.Symbol.toLowerCase().indexOf(filterQuery) > -1;
         if (matchSymbol || matchSymbolName) return symbolObj;
       });
-      console.log('filtered symbols: ', this.filteredSymbols)
     };
+    this.filterQuery.length > 0 ? this.displayClearButton = true : this.displayClearButton = false;
     hasList ? setFilteredSymbols.call(this) : console.log('No list to filter');
   }
 
   selectSymbol(symbol): void {
     const period = this.period;
     this.symbolService.fetchSymbolData(symbol, 'Monthly');
+  }
+
+  clearInputField() {
+    this.filterQuery = '';
+    this.displayClearButton = false;
   }
 }

@@ -67,3 +67,11 @@ ul {
     height: 200px !important;
   }
 }
+
+.symbols-input-clear {
+  position: absolute; 
+  color: white;
+  margin-top: -31px;
+  margin-left: 270px;
+  cursor: pointer;
+}
