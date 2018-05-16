@@ -1,12 +1,10 @@
 # Stockio - simple chart view of high and low of stocks.
 
-![img](https://i.imgur.com/Ezwei9V.png)
-![img](https://i.imgur.com/vzmGJ7U.png)
+![img](https://i.imgur.com/dupSy3Z.png)
+![img](https://i.imgur.com/YXkD144.png)
 
 Quick start - `npm start`
 Go to link - `http://localhost:4200/`
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
 
 ## Development server
 
