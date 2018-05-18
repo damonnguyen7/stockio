@@ -1,4 +1,4 @@
-# Stockio - simple chart view of high and low of stocks.
+# Stockio - simple chart view of highs and lows of stocks.
 
 ![img](https://i.imgur.com/dupSy3Z.png)
 ![img](https://i.imgur.com/YXkD144.png)
